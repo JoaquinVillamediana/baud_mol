@@ -1,80 +1,89 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="csrf-token" content="{{ Session::token() }}">
+        <title>DIAGEO</title>
+        <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+        <!-- Bootstrap core CSS-->
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+        <link rel="stylesheet" href="/vendor/bootstrap.min.css" crossorigin="anonymous">
+        <!-- Custom fonts for this template-->
+        <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">   
+        <!-- Custom styles for this template-->
+        <link href="/css/sb-admin.css" rel="stylesheet">
+        <link href="/css/custom.css" rel="stylesheet">
+        <script src="/vendor/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        
+    </head>
+   
+    @isset($bodyclass)
+    <body class="{{$bodyclass}}" id="page-top">
+        @endisset
+        @empty($bodyclass)
+    <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+        @endempty
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
 
-                    </ul>
+        @yield('content')
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+        @empty($hidenav)
+        @include('layouts.nav')
+        @endempty
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+        <!-- Bootstrap core JavaScript-->
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <script src="/vendor/popper.min.js" crossorigin="anonymous"></script>
+        <script src="/vendor/bootstrap.min.js" crossorigin="anonymous"></script>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-</body>
+        <!-- Core plugin JavaScript-->
+        <script src="/vendor/jquery.easing.compatibility.js" crossorigin="anonymous"></script>
+
+        <!-- Page level plugin JavaScript-->
+        <!--<script src="/vendor/Chart.bundle.js" crossorigin="anonymous"></script>-->
+
+        <!-- DATA-TABLES-->
+        <script src="/assets/js/lib/data-table/jquery.dataTables.min.js"></script>
+        <script src="/assets/js/lib/data-table/dataTables.bootstrap4.js"></script>
+        <script src="/assets/js/lib/data-table/dataTables.rowReorder.min.js"></script>
+        <link href="/assets/css/lib/datatable/rowReorder.dataTables.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/lib/datatable/buttons.dataTables.min.css" rel="stylesheet">
+        <script src="/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+        <script src="/assets/js/lib/data-table/buttons.flash.min.js"></script>
+        <script src="/assets/js/lib/data-table/jszip.min.js"></script>
+        <script src="/assets/js/lib/data-table/pdfmake.min.js"></script>
+        <script src="/assets/js/lib/data-table/vfs_fonts.js"></script>
+        <script src="/assets/js/lib/data-table/buttons.html5.min.js"></script>
+        <script src="/assets/js/lib/data-table/buttons.print.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="/js/sb-admin.js"></script>
+
+        <!-- Custom scripts for this page-->
+        <script src="/js/sb-admin-datatables.js"></script>
+        <!-- <script src="/js/sb-admin-charts.js"></script>-->
+        
+        <script>
+$('#toggleNavPosition').click(function () {
+    $('body').toggleClass('fixed-nav');
+    $('nav').toggleClass('fixed-top static-top');
+});
+
+$('#toggleNavColor').click(function () {
+    $('nav').toggleClass('navbar-dark navbar-light');
+    $('nav').toggleClass('bg-dark bg-light');
+    $('body').toggleClass('bg-dark bg-light');
+});
+        </script>
+
+    </body>
+    
 </html>
