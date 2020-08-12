@@ -71,7 +71,7 @@
 </p>                
 <a href="#"> Catálogo</a>
 
-<button type="button"> Ver catálogo</button>
+<button type="button"> Ver catálogo xd</button>
 
 
                           </div>                
