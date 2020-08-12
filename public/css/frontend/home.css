@@ -1,9 +1,9 @@
 .text-platzi{
-    color: #97c93e !important;
+    color: orange !important;
 }
 
 #footer{
-    background: orange;
+    background: #F27701;
 }
 
 #footer a{
@@ -31,6 +31,26 @@ filter: grayscale(70%);
     color: white;
     
 }
+#carousel .titulo{
+    margin-top: 40px;
+    margin-left: 120px;
+}
 #header{
 background-color: black;
+
+}
+
+
+#body{
+    color: white;
+    background: #010101;
+    background: -webkit-linear-gradient(top, #010101, #F27701);
+    background: -moz-linear-gradient(top, #010101, #F27701);
+    background: linear-gradient(to bottom, #010101, #F27701);
+}
+
+#body .titulo{
+    color: white;
+    margin-left: 50px;
+    /* margin-top: 50px; */
 }

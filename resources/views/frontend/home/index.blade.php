@@ -11,78 +11,95 @@
     <title>Baud-mol</title>
   </head>
   <body>
-<!-- header -->
-<nav id="header" class="navbar navbar-expand-lg ">
- <div class="container">
-  <a class="navbar-brand" href="#">Baud-mol</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <!-- header -->
+    <nav id="header" class="navbar navbar-expand-lg ">
+      <div class="container">
+        <a class="navbar-brand" href="#">Baud-mol</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Nosotros</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Catálogo</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Búsqueda</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-platzi" href="#">Imágenes</a>
-      </li>
-    </ul>
-    </div>  
-  </div>
-</nav>
-<!-- end header -->
-<!-- main -->
-<section id="main">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Búsqueda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-platzi" href="#">Imágenes</a>
+            </li>
+          </ul>
+        </div>  
+      </div>
+    </nav>
+  <!-- end header -->
+  <!-- main -->
+  <section id="main">
     <div id="carousel" class="carousel slide" data-ride="carousel" data-pause="false">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/home/slider1.jpeg" class="d-block w-100" alt=" img 1">
-            </div>
-            <div class="carousel-item">
-                <img src="images/home/slider2.jpeg" class="d-block w-100" alt=" img 2">
-            </div>
-            <div class="carousel-item">
-                <img src="images/home/slider3.jpeg" class="d-block w-100" alt=" img 3 ">
-            </div>
-            <div class="overlay">
-                <div class="container">
-                     <div class="row">
-                         <div class="overlay">
-                         <h1>Bienvenido a Baud-Mol</h1>
-<p>Siempre con seriedad, BAUD-MOL S.A elabora la totalidad de sus productos en su moderna planta industrial de 2.400m2, </br>utilizando únicamente materia prima de primerísimo nivel y mano de obra altamente capacitada. 
-</p>                
-<a href="#"> Catálogo</a>
-
-<button type="button"> Ver catálogo xd</button>
-
-
-                          </div>                
-                    </div>
-                </div>
-            </div>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/home/slider1.jpeg" class="d-block w-100" alt=" img 1">
         </div>
-
+        <div class="carousel-item">
+          <img src="images/home/slider2.jpeg" class="d-block w-100" alt=" img 2">
+        </div>
+        <div class="carousel-item">
+          <img src="images/home/slider3.jpeg" class="d-block w-100" alt=" img 3 ">
+        </div>
+        <div class="overlay">
+          <div class="container">
+            <div class="row">
+              <div class="overlay">
+                <div class="titulo">
+                  <h1>Bienvenido a Baud-Mol</h1>
+                  <p>Siempre con seriedad, BAUD-MOL S.A elabora la totalidad de sus productos en su moderna planta industrial de 2.400m2,   
+                  </br>utilizando únicamente materia prima de primerísimo nivel y mano de obra altamente capacitada. 
+                  </p>                
+                  <a href="#"> Catálogo</a>
+                  <button type="button"> Ver catálogo xd</button>
+                </div>
+              </div>                
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-<section id="main">
+  </section>
 <!-- endmain -->
+<section id="body">
+  <div class="description">
+    <table>
+      <tr>
+        <td>
+        <h2>Bienvenido a Baud-Mol</h2> 
+        <p>
+      Siempre con seriedad, BAUD-MOL S.A elabora la totalidad de sus productos en su moderna planta industrial de 2.400m2, </br>utilizando únicamente materia prima de primerísimo nivel y mano de obra altamente capacitada.
+    </p>
+        </td>
+     <td>
+     <img src="images/home/laburante.jpeg" alt=""width="325" height="400">
+     </td>
+      </tr>
+    </table>
+
+</div>
+</section>
 <!-- footer -->
 
 <footer id="footer" class="pb-4 pt-4">
