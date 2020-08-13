@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ Session::token() }}">
     <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/vendor/bootstrap.min.css" crossorigin="anonymous">
     <script src="/vendor/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <link href="/vendor/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/frontend/general.css"> 
      <link rel="stylesheet" href="/css/frontend/home.css"> 
 
     
@@ -17,7 +19,6 @@
   <body>
 
 <!-- main -->
-
 
 
 <div class="nav-margin">

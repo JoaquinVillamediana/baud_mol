@@ -1,56 +1,138 @@
-.text-platzi{
-    color: orange !important;
-}
-
-#footer{
-    background: #F27701;
-}
-
-#footer a{
-    color: white;
-    
-}
-#main .carousel-inner img{
-max-height: 70vh;
-object-fit: cover;
-filter: grayscale(70%);
-
-}
-
-#carousel{
-    position:relative;
-
-}
-#carousel .overlay{
-    position:absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    
-}
-#carousel .titulo{
-    margin-top: 40px;
-    margin-left: 120px;
-}
-#header{
-background-color: black;
-
-}
-
-
-#body{
-    color: white;
-    background: #010101;
-    background: -webkit-linear-gradient(top, #010101, #F27701);
-    background: -moz-linear-gradient(top, #010101, #F27701);
-    background: linear-gradient(to bottom, #010101, #F27701);
-}
-
-#body .titulo{
-    color: white;
-    margin-left: 50px;
-    /* margin-top: 50px; */
-}
+        #main .carousel-inner img {
+            max-height: 70vh;
+            object-fit: cover;
+            filter: grayscale(70%);
+        }
+        
+        #carousel {
+            position: relative;
+        }
+        
+        #carousel .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        
+        #carousel .titulo {
+            margin-top: 40px;
+            margin-left: 120px;
+        }
+        
+        #body {
+            color: white;
+            background: #010101;
+            background: -webkit-linear-gradient(top, #010101, #F27701);
+            background: -moz-linear-gradient(top, #010101, #F27701);
+            background: linear-gradient(to bottom, #010101, #F27701);
+        }
+        
+        #body .titulo {
+            color: white;
+            margin-left: 50px;
+            /* margin-top: 50px; */
+        }
+        
+        .btn-baud {
+            background-color: #000000;
+            color: #F27701;
+            font-weight: bold;
+        }
+        
+        .btn-baud:hover {
+            background-color: #2b2b2b;
+            color: #F27701;
+        }
+        
+        .section-text-farbric {
+            padding: 20px 0;
+            background-color: #eeeeee;
+            color: #000000;
+        }
+        
+        .section-text-farbric .draw {
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .section-text-farbric .section-title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .section-text-farbric p b {
+            font-weight: bold;
+            color: #F27701;
+        }
+        
+        .section-text-wires {
+            background-color: #fff;
+            color: #000000;
+            padding: 20px 0;
+        }
+        
+        .section-text-wires .consult {
+            font-size: 14px;
+        }
+        
+        .section-text-wires .btn-baud {
+            width: 100%;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+        .section-text-wires #carousel-wires img {
+            height: 250px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        
+        .section-text-wires #carousel-wires {
+            margin-bottom: 20px;
+        }
+        
+        .section-text-wires ul li {
+            list-style: none;
+        }
+        
+        .section-founder {
+            color: #000000;
+            background-color: #eeeeee;
+            padding: 20px 0;
+        }
+        
+        .section-founder .section-title {
+            text-align: center;
+        }
+        
+        .section-founder .section-title b {
+            color: #F27701;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        
+        .section-founder .founder-name b {
+            color: #F27701;
+        }
+        
+        .section-founder .founder-text {
+            margin-top: 20px;
+            max-width: 800px;
+        }
+        
+        .section-founder .founder-photo {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: 3px solid #ffffff;
+            border-radius: 30px;
+        }
+        
+        .section-founder .founder-col {
+            display: flex;
+            justify-content: flex-end;
+        }
