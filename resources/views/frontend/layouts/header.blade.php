@@ -3,7 +3,7 @@
 <!-- header -->
 <nav id="header" class="navbar navbar-expand-lg navbar-light">
  <div class="container">
-  <a class="navbar-brand" href="#">Baud-mol</a>
+  <a class="navbar-brand" href="{{ route('home') }}">Baud-mol</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -14,7 +14,7 @@
         <a class="nav-link" href="#">Conferencia</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link important" href="#">Catalogo</a>
+        <a class="nav-link important" href="{{ route('product') }}">Catalogo</a>
       </li>
       
     </ul>

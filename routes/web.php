@@ -20,6 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// Frontend
+Route::get('product', 'frontend\ProductController@index')->name('product');
+
 
 // admin
 Route::get('upload-image','ProductsController@image');

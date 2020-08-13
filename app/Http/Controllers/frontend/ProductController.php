@@ -23,54 +23,17 @@ use App\Models\ImageModel;
 
 class ProductController extends Controller {
 
-    public function index($id) {
+    public function index() {
 
-        if(!Auth::guest())
-        {
-        $user=Auth::user()->id;
-        }
-        else{
-          $user= 0;      
-        }
-        
-        $aFavorites = FavoritesModel::where('user_id','=',$user)
-        ->where('product_id','=',$id)
-        ->first();
-        
-        $aCart = CartModel::where('user_id','=',$user)
-        ->where('product_id','=',$id)
-        ->first();
-        
-        $oProduct = DB::select('SELECT p.*,
-        MIN(i.image) image,(f.product_id) favoritos,(categories.prom) prom
-        FROM products p
-        LEFT JOIN categories ON (p.category_id = categories.id and  categories.deleted_at is null)
-        LEFT JOIN images i ON p.id = i.product_id
-        LEFT JOIN favoritos f ON  (p.id = f.product_id and  f.user_id = "'.$user.'" and f.deleted_at is null)
-        where i.deleted_at is null
-        and p.visible = 1
-        and p.deleted_at is  null
-        and p.id = "'.$id.'"
-        GROUP BY p.id;
+      
+        $oProduct = DB::select('SELECT *
+        FROM products 
+       
         ');
 
-        $aCategories = DB::select('SELECT  categoriess.*, COUNT(sub_categoriess.id) AS countsub, COUNT(case sub_categoriess.visible when 1 then 1 else null end) AS countvis
-        FROM categories categoriess
-        LEFT JOIN sub_categories sub_categoriess
-        ON sub_categoriess.category_id = categoriess.id    
-        WHERE categoriess.visible = 1 and
-        categoriess.deleted_at is null and
-        sub_categoriess.deleted_at is null
-        GROUP BY categoriess.id
-        ');
-
-        $aSubCategories = SubModel::where('sub_categories.visible' ,'=', '1')
-        ->get();
-
-        $aImage = ImageModel::where('images.product_id', '=', $id)
-        ->get();
-
-        return view('frontend/product.index',compact('aCategories','aSubCategories','oProduct','aImage', 'aCart','aFavorites'));
+    
+    
+        return view('frontend/product.index',compact('oProduct'));
     }
 
     public function show() {

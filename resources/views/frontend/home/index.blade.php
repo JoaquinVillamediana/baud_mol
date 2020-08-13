@@ -103,7 +103,7 @@
           </div>
         </div>
         <small class="consult">Consultá</small>
-        <a href="" class="btn btn-baud">NUESTRO CATÁLOGO</a>
+        <a href="{{ route('product') }}" class="btn btn-baud">NUESTRO CATÁLOGO</a>
       </div>
     </div>
   </div>
