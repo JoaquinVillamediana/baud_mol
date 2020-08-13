@@ -11,10 +11,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio</a>
+        <a class="nav-link" href="{{ route('home') }}">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link important" href="{{ route('product') }}">Catalogo</a>
+        <a class="nav-link important" href="{{ route('catalog') }}">Catalogo</a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="#">Imágenes</a>

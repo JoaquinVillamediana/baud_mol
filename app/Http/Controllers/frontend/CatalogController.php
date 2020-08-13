@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
-
+use DB;
+use App\Models\SubModel;
 use Illuminate\Http\Request;
-
+use App\Models\ProductsModel;
 class CatalogController extends Controller
 {
     /**
@@ -14,7 +15,21 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        return view('frontend/catalog.index');
+        $aCategories = DB::select('SELECT  categoriess.*, COUNT(sub_categoriess.id) AS countsub, COUNT(case sub_categoriess.visible when 1 then 1 else null end) AS countvis
+        FROM categories categoriess
+        LEFT JOIN sub_categories sub_categoriess ON sub_categoriess.category_id = categoriess.id
+      
+        WHERE  categoriess.deleted_at is null and sub_categoriess.deleted_at is null
+        GROUP BY categoriess.id
+        ');
+        
+        $aSubCategories = SubModel::where('sub_categories.visible' ,'=', '1')
+        ->get();
+
+        $aProducts = ProductsModel::where('products.deleted_at' ,'=', null)
+        ->get();
+        
+        return view('frontend/catalog.index',compact('aCategories','aSubCategories','aProducts'));
     }
 
     /**
