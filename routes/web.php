@@ -20,6 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// Frontend
+Route::get('product', 'frontend\ProductController@index')->name('product');
+
 
 Route::get('/catalogo', 'frontend\CatalogController@index')->name('catalog');
 // admin
