@@ -1,7 +1,32 @@
 #footer {
-    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(207, 207, 207, 1) 100%);
 }
 
 #footer a {
-    color: white;
+    color: #000;
 }
+
+#footer .logo {
+    float: left;
+    width: 150px;
+}
+
+#footer .logo-text {
+    padding: 20px 0;
+    color: #555555;
+    text-align: left;
+    font-size: 12px;
+}
+
+#footer .col-medias {
+    margin-top: 30px;
+}
+
+#footer .media-link {
+    color: #999999;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+#footer .media-link:first-child {}

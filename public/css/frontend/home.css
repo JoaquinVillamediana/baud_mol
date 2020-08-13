@@ -49,7 +49,7 @@
         }
         
         .section-text-farbric {
-            padding: 20px 0;
+            padding: 40px 0;
             background-color: #eeeeee;
             color: #000000;
         }
@@ -72,7 +72,8 @@
         .section-text-wires {
             background-color: #fff;
             color: #000000;
-            padding: 20px 0;
+            padding: 40px 0;
+            width: 100%;
         }
         
         .section-text-wires .consult {
@@ -102,7 +103,7 @@
         .section-founder {
             color: #000000;
             background-color: #eeeeee;
-            padding: 20px 0;
+            padding: 40px 0;
         }
         
         .section-founder .section-title {

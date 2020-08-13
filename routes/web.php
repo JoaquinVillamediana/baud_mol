@@ -21,6 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/catalogo', 'frontend\CatalogController@index')->name('catalog');
 // admin
 Route::get('upload-image','ProductsController@image');
 Route::post('upload-image',['as'=>'image.upload','uses'=>'admin\ProductsController@uploadImages']);
