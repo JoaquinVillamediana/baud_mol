@@ -38,6 +38,11 @@
           @endif
           @endif
         @endforeach 
+        @foreach($aProducts as $pr)
+        @if($pr->category_id == $category->id && $pr->subcategory_id == NULL )
+        <h5 class="product">{{$pr->name}}<a href="#" class="more">Ver más</a></h5>
+        @endif
+        @endforeach
       </div>
       @endif
     @endforeach 
