@@ -1,6 +1,6 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="{{ url('/admin') }}">E-COMMERCE</a>
+    <a class="navbar-brand" href="#">Baud-mol</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -41,16 +41,7 @@
                 </a>
             </li>
 
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
-                <a class="nav-link" href="{{ route('contact.index') }}">
-                <i class="fa fa-book" aria-hidden="true"></i>
-                    <span class="nav-link-text">Contactados</span>
-                </a>
-            </li>
-
-           
-            
-
+ 
 
         </ul>
         <ul class="navbar-nav sidenav-toggler">

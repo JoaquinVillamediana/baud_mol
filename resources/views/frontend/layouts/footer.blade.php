@@ -10,8 +10,10 @@
                         <img class="logo" src="/images/baudmol.png" alt="">
                     </div>
                     <div class="col-12 text-left col-medias">
-                        <a class="media-link" href=""><i class="fab fa-facebook-f"></i></a><a class="media-link" href=""><i
-                            class="fab fa-twitter"></i></a><a class="media-link" href=""><i
+                        <a class="media-link" href="https://www.facebook.com/Conductores-El%C3%A9ctricos-BAUD-MOL-100974101473074"><i class="fab fa-facebook-f"></i></a>
+                        <a class="media-link" href=""><i
+                            class="fab fa-twitter"></i></a>
+                        <a class="media-link" href="https://instagram.com/baudmol20?igshid=1rs2z3jf2zkg2"><i
                             class="fab fa-instagram"></i></a>
                     </div>
                     <div class="col-12">
@@ -20,10 +22,21 @@
                 </div>
 
             </div>
+            
             <div class="col-6">
                 <div class="row">
                     <div class="col-12">
                         <a href="">Contacto</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a><i class="fas fa-map-marker-alt"></i> Crespo 2049, C1406 CNA, Buenos Aires</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a ><i class="fas fa-phone"></i> 011 4921-4227</a>
                     </div>
                 </div>
             </div>

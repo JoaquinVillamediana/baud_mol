@@ -23,7 +23,7 @@
         @foreach ($aSubCategories as $subcategory)
           @if ($subcategory->category_id == $category->id)
             <h5 data-subcategory_id="{{$subcategory->id}}"  class="subcategory-name">{{$subcategory->name}}<span class="subcategory-arrow"><i class="fas fa-chevron-circle-down"></i></span></h5>
-            @if($category->countsub <= 1)
+            @if($category->countsub > 0)
             <div id="subcategory-{{$subcategory->id}}" style="display: none" class="subcategory">
               @foreach ($aProducts as $pr)
                 @if ($pr->subcategory_id == $subcategory->id)

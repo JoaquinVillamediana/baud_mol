@@ -3,6 +3,7 @@
 <!-- header -->
 <nav id="header" class="navbar navbar-expand-lg navbar-light">
  <div class="container">
+ <img class="logo" src="/images/baudmol.png" alt="">
   <a class="navbar-brand" href="{{ route('home') }}">Baud-mol</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
