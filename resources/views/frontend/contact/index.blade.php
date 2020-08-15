@@ -18,7 +18,7 @@
 
 <!--Grid column-->
 <div class="col-md-9 mb-md-0 mb-5">
-    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+    <form  action="{{ route('send_mail') }}" >
 
         <!--Grid row-->
         <div class="row">
@@ -74,11 +74,12 @@
         </div>
         <!--Grid row-->
 
+        <div class="text-center text-md-left">
+    <button class="btn btn-primary" type="submit">Button</button>
+    </div>
     </form>
 
-    <div class="text-center text-md-left">
-        <a class="btn btn-primary mt-4" onclick="document.getElementById('contact-form').submit();">Enviar</a>
-    </div>
+    
     <div class="status"></div>
 </div>
 <!--Grid column-->

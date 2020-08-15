@@ -17,9 +17,9 @@
       <li class="nav-item">
         <a class="nav-link important" href="{{ route('catalog') }}">Catalogo</a>
       </li>
-      <li class="nav-item ">
+      <!-- <li class="nav-item ">
         <a class="nav-link" href="#">Imágenes</a>
-      </li>
+      </li> -->
       <li class="nav-item ">
         <a class="nav-link" href="{{ route('contacto') }}">Contacto</a>
       </li>

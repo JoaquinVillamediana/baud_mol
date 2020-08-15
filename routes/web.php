@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Frontend
 Route::get('product', 'frontend\ProductController@index')->name('product');
 
+Route::get('send_mail', 'frontend\ContactController@mail')->name('send_mail');
 Route::get('contacto', 'frontend\ContactController@index')->name('contacto');
 Route::get('/catalogo', 'frontend\CatalogController@index')->name('catalog');
 // admin
