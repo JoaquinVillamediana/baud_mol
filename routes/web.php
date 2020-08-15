@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Frontend
 Route::get('product', 'frontend\ProductController@index')->name('product');
 
-
+Route::get('contacto', 'frontend\ContactController@index')->name('contacto');
 Route::get('/catalogo', 'frontend\CatalogController@index')->name('catalog');
 // admin
 Route::get('upload-image','ProductsController@image');
