@@ -38,10 +38,6 @@ class ProductsController extends Controller {
         $aValidations = array(
             
             'name' => 'required|max:60',
-            'news' => 'required|max:60',
-            'description' => 'required|max:150',
-            'price' => 'required|numeric',
-            'stock' => 'required|numeric',
             'category_id' => 'required|numeric',
            
         );
@@ -52,17 +48,9 @@ class ProductsController extends Controller {
 
         $request['name'] = ucwords($request['name']);
 
-        if(!empty($request['news'])){
-            $request['news'] = ucwords($request['news']);
+    
 
-        }
-        else{
-            $request['news'] = ucwords($request['news']);
-
-
-        }
-
-        $request['description'] = ucwords($request['description']);
+       
         ProductsModel::create($request->all());         
         $product_id = ProductsModel::max('id');
         return redirect()->route('indexImages' , $product_id);
@@ -91,11 +79,6 @@ class ProductsController extends Controller {
         $aValidations = array(
             
             'name' => 'required|max:60',
-              
-            'news' => 'required|max:60',
-            'description' => 'required|max:150',
-            'price' => 'required|numeric',
-            'stock' => 'required|numeric',
             'category_id' => 'required|numeric',
            
         );
@@ -111,22 +94,10 @@ class ProductsController extends Controller {
         $oProduct = ProductsModel::find($id);
           
         $request['name'] = ucwords($request['name']);
-        $request['news'] = ucwords($request['news']);
-        $request['description'] = ucwords($request['description']);
-
+       
         $oProduct->name = $request['name'];
 
-        if(!empty($request['news'])){
-            $oProduct->news = $request['news'];
 
-        }
-        else{
-            $oProduct->news= $request['news'];
-
-
-        }
-
-        $oProduct->description = $request['description'];
 
         if(!empty($request['subcategory_id']))
         {
@@ -134,8 +105,7 @@ class ProductsController extends Controller {
         }else{
             $oProduct->subcategory_id = null;
         }
-        $oProduct->price = $request['price'];
-        $oProduct->stock = $request['stock'];
+      
         $oProduct->category_id = $request['category_id'];
         $oProduct->save();
 

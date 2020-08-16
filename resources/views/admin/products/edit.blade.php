@@ -67,61 +67,11 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="form-group col-12 col-md-6">
-                                    <label>Precio</label>
-                                    <div class="input-group"> 
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
-                                        
-                                      </div>
-                                    <input type="number" id="price" name="price" maxlength="250" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" placeholder="Precio:" value="{{ $oProduct->price }}">
-                                </div>
-                                    @if ($errors->has('price'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Debe ingresar un precio valido.</strong>
-                                    </span>
-                                    @endif
-                                </div>       
-
-                                <div class="form-group col-12 col-md-6">
-                                    <label>Stock Actual</label>
-                                    <input type="number" id="stock" name="stock" maxlength="250" class="form-control{{ $errors->has('stock') ? ' is-invalid' : '' }}" placeholder="Unidades en Stock:" value="{{ $oProduct->stock }}">
-                                    @if ($errors->has('stock'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Debe ingresar un stock valido.</strong>
-                                    </span>
-                                    @endif
-                                </div>       
-
-                            </div>
-
-                            <div class="form-group">
-                                <label>Descripcion</label>
-                            <textarea  id="description" name="description" maxlength="250" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="Descripcion:" >{{$oProduct->description}}</textarea>
-                                @if ($errors->has('description'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>Debe ingresar una descripcion valida.</strong>
-                                </span>
-                                @endif
-                            </div>   
                             
-                                   
-                            <div class="form-group">
-                                <label>Destacado</label>
-<!--                                 
-                                <input id="news" name="news" maxlength="250" class="form-control{{ $errors->has('news') ? ' is-invalid' : '' }}" placeholder="Promociones: (Opcional)" value="{{ old('news') }}">
-                                 -->
-                                 <input type="hidden" name="news" value="0">
-<input type="checkbox" name="news" value="1">
 
-           
-                                <!-- @if ($errors->has('news'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>Debe ingresar una promoción valido.</strong>
-                                </span>
-                                @endif -->
-                            </div>            
+                     
+                            
+                           
                             
                            
   

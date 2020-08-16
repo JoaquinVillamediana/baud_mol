@@ -25,13 +25,11 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Nombre</th>                                
-                                <th>Descripcion</th>  
+                                 
                                 <th>Categoria</th>
                                 <th>Subcategoria</th>
-                                <th>Precio</th>
-                                <th>Destacados</th>     
-                                <th>Stock</th>  
-                                <th>Visible</th>
+                                
+                               
                                 <th>Editar</th>
                                 <th>Eliminar</th>
                             </tr>
@@ -43,21 +41,13 @@
                             <tr>
                                 <td>{{ $product->id }}</td>
                                 <td>{{ $product->name }}</td>
-                                <td>{!! $product->description !!}</td>
+                              
                                 <td>{{ $product->category_name }}</td>
                                 <td>{{ $product->subcategory_name}}</td>
-                                <td>{{ $product->price }}</td>
-                                @if ($product->news == 1)     
-                                <td>{{ "Destacado" }}</td>
-                                @else                     
-                                <td>{{ "Sin destacar" }}</td>
-                                @endif  
 
                                 
+                           
                                
-                                
-                                <td>{{ $product->stock }}</td>
-                                <td><a class="article_index_btn {{ $product->visible == 1 ? ' article_index_btn_active' : '' }}" href="" onClick="setProductVisible('{{ $product->id }}');"><i id="visible_icon_{{$product->id}}" class="fas fa-eye"></i></a></td>
                             <td><a class="btn btn-primary btn-circle" href="{{action('admin\ProductsController@edit',$product->id)}}"><i class="fa fa-list"></i></a></td>
                                 <td>
                                     <form id="deleteForm_{{$product->id}}" action="{{action('admin\ProductsController@destroy', $product->id)}}" method="POST">

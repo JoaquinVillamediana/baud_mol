@@ -63,87 +63,13 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="form-group col-12 col-md-6">
-                                    <label>Precio</label>
-                                 
-                                    <input type="number" id="price" name="price" maxlength="250" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" placeholder="Precio:" value="{{ old('price') }}">
-                              
-                                    @if ($errors->has('price'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Debe ingresar un precio valido.</strong>
-                                    </span>
-                                    @endif
-                                </div>       
+                        
 
-                                <div class="form-group col-12 col-md-6">
-                                    <label>Stock Actual</label>
-                                    <input type="number" id="stock" name="stock" maxlength="250" class="form-control{{ $errors->has('stock') ? ' is-invalid' : '' }}" placeholder="Unidades en Stock:" value="{{ old('stock') }}">
-                                    @if ($errors->has('stock'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Debe ingresar un stock valido.</strong>
-                                    </span>
-                                    @endif
-                                </div>       
-
-                            </div>
-
-                            <div class="form-group">
-                                <label>Descripción</label>
-                                <div id="toolbar-container" style="border-radius:.25rem;">
-                                    <span class="ql-formats">
-                                        <select class="ql-size"></select>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-bold"></button>
-                                        <button class="ql-italic"></button>
-                                        <button class="ql-underline"></button>
-                                        <button class="ql-strike"></button>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <select class="ql-color"></select>
-                                        <select class="ql-background"></select>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-header" value="1"></button>
-                                        <button class="ql-header" value="2"></button>
-                                        <button class="ql-blockquote"></button>
-                                        <button class="ql-code-block"></button>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-list" value="ordered"></button>
-                                        <button class="ql-list" value="bullet"></button>
-                                        <button class="ql-indent" value="-1"></button>
-                                        <button class="ql-indent" value="+1"></button>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-direction" value="rtl"></button>
-                                        <select class="ql-align"></select>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-link"></button>
-                                    </span>
-                                </div>
-                                <input type="hidden" id="description" name="description"/>
-                                <div id="editor-container" style="border:1px solid #ced4da; border-radius:.25rem; margin-top:5px;">{!! old('description') !!}</div>
-                                <span id="description_error" class="invalid-feedback" role="alert" style="display:none;">
-                                    <strong>Debe ingresar una descripción (max. 12000 car.)</strong>
-                                </span>                                
-                            </div>  
+                        
 
 
 
-                            <div class="form-group">
-                                <label>Destacado</label>
-                                <input type="hidden" name="news" value="0">
-<input type="checkbox" name="news" value="1">
-                                <!-- <input id="news" name="news" maxlength="250" class="form-control{{ $errors->has('news') ? ' is-invalid' : '' }}" placeholder="Promociones: (Opcional)" value="{{ old('news') }}">
-                                 @if ($errors->has('news')) -->
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>Debe ingresar una promoción valido.</strong>
-                                </span>
-                                @endif -->
-                            </div>                              
+                                               
   
 
                            
