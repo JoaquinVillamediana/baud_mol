@@ -34,17 +34,6 @@
                                     @endif
                                 </div>
 
-                                <div class="form-group col-md">
-                                    <label>Descripcion</label>
-                                    <input id="description" name="description" maxlength="60"
-                                        class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
-                                        placeholder="description" value="{{ $oSub->description }}">
-                                    @if ($errors->has('description'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Debe ingresar una descripcion correcta.</strong>
-                                    </span>
-                                    @endif
-                                </div>
                                 <div class="form-group ">
                                     <label>Categoria</label>
                                     <select class="form-control" name="category_id" id="category_id">
@@ -61,12 +50,7 @@
 
                             </div>
 
-                    
-
-
-                          
-
-                    
+                 
 
                             <button type="submit" class="btn btn-primary">Editar Usuario</button>
                             <button type="reset" class="btn btn-default">Reset</button>

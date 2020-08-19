@@ -29,7 +29,6 @@ class CategoriesController extends Controller {
         $aValidations = array(
             
             'name' => 'required|max:60',
-            'description' => 'required|max:150'
             
            
         );
@@ -56,7 +55,6 @@ class CategoriesController extends Controller {
     
         $request['name'] = ucwords($request['name']);
         
-        $request['description'] = ucwords($request['description']);
            
         CategoriesModel::create($request->all());
 
@@ -78,7 +76,7 @@ class CategoriesController extends Controller {
         
         $aValidations = array(
             'name' => 'required|max:60',
-            'description' => 'required|max:150'
+            
         );
        
 
@@ -87,7 +85,7 @@ class CategoriesController extends Controller {
         $oCate = CategoriesModel::find($id);
           
         $request['name'] = ucwords($request['name']);
-        $request['description'] = ucwords($request['description']);
+    
 
         if(!empty($request['prom'])){
 
@@ -98,7 +96,7 @@ class CategoriesController extends Controller {
 
         
         $oCate->name = $request['name'];
-        $oCate->description = $request['description'];
+      
                
         $oCate->save();
 

@@ -28,6 +28,14 @@ class CatalogController extends Controller
 
         $aProducts = ProductsModel::where('products.deleted_at' ,'=', null)
         ->get();
+
+        $aSubCategories = DB::select('SELECT  sub_categoriess.*, COUNT(pr.id) AS countpr
+        FROM sub_categories sub_categoriess
+        LEFT JOIN products pr ON pr.subcategory_id = sub_categoriess.id
+        WHERE  sub_categoriess.deleted_at is null 
+        and pr.deleted_at is null
+        GROUP BY sub_categoriess.id
+        ');
         
         return view('frontend/catalog.index',compact('aCategories','aSubCategories','aProducts'));
     }

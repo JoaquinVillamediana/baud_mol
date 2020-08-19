@@ -24,10 +24,8 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Nombre</th>                                
-                                <th>Descripcion</th>
+                                <th>Nombre</th>                                                              
                                 <th>Promoción</th>    
-
                                 <th>Publicado</th>
                                 <th>Editar</th>
                                 <th>Eliminar</th>
@@ -40,9 +38,6 @@
                             <tr>
                                 <td>{{ $cate->id }}</td>
                                 <td>{{ $cate->name }}</td>
-                                <td>{{ $cate->description }}</td>
-
-
                                 @if(!empty($cate->prom))
                                 <td>{{ $cate->prom }}</td>
 @else

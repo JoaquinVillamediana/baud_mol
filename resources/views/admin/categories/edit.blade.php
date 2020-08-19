@@ -34,16 +34,7 @@
                             </div>       
 
 
-                            <div class="form-group">
-                                <label>Descripcion</label>
-                            <textarea  id="description" name="description" maxlength="250" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="Descripcion:" >{{$oCate->description}}</textarea>
-                                @if ($errors->has('description'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>Debe ingresar una descripcion valida.</strong>
-                                </span>
-                                @endif
-                            </div>   
-                            
+                        
 
 
 

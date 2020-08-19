@@ -28,15 +28,7 @@
                                 </span>
                                 @endif
                             </div>       
-                            <div class="form-group">
-                                <label>Descripcion</label>
-                                <input id="description" name="description" maxlength="250" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="Descripcion:" value="{{ old('description') }}">
-                                @if ($errors->has('description'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>Debe ingresar una descripcion valido.</strong>
-                                </span>
-                                @endif
-                            </div>         
+                              
                         
                             <div style="width:100%;float:left;"><h4 class="text-secondary"> Agregar promoción</h4></div>
 <input type="button" value="Yes" onclick="ShowHideDiv(this)" />

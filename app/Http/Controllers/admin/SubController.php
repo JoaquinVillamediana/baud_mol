@@ -34,7 +34,6 @@ class SubController extends Controller{
         $aValidations = array(
             
             'name' => 'required|max:60',
-            'description' => 'required|max:150',
             'category_id' => 'required|max:60'
            
         );
@@ -56,8 +55,7 @@ class SubController extends Controller{
 
     
         $request['name'] = ucwords($request['name']);
-        
-        $request['description'] = ucwords($request['description']);
+
         $request['category_id'] = ucwords($request['category_id']);
      
         SubModel::create($request->all());
@@ -83,7 +81,7 @@ class SubController extends Controller{
         $aValidations = array(
             
             'name' => 'required|max:60',
-            'description' => 'required|max:150'
+           
         );
 
         
@@ -94,11 +92,11 @@ class SubController extends Controller{
         $oSub = SubModel::find($id);
           
         $request['name'] = ucwords($request['name']);
-        $request['description'] = ucwords($request['description']);
+  
         $request['category_id'] = ucwords($request['category_id']);
 
         $oSub->name = $request['name'];
-        $oSub->description = $request['description'];
+
          $oSub->category_id = $request['category_id'];
       
         

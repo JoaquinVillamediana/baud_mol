@@ -28,15 +28,7 @@
                                 </span>
                                 @endif
                             </div>       
-                            <div class="form-group">
-                                <label>Descripcion</label>
-                                <input id="description" name="description" maxlength="250" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="Descripcion:" value="{{ old('description') }}">
-                                @if ($errors->has('description'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>Debe ingresar una descripcion valido.</strong>
-                                </span>
-                                @endif
-                            </div>         
+                                
                             <div class="form-group ">
                                     <label>Categoria</label>
                                     <select class="form-control" name="category_id" id="category_id">
