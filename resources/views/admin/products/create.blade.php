@@ -2,8 +2,6 @@
 
 @section('content')
 
-<link href="/assets/js/lib/quill-136/quill_snow.css" rel="stylesheet">
-<link rel="stylesheet" href="/assets/js/lib/quill-136/highlight.css">
 <link rel="stylesheet" href="/css/admin_custom.css">
 <div class="content-wrapper">
     <div class="container-fluid">
@@ -115,13 +113,13 @@
         var category_id = $('#category_id').val(); 
 
         if(category_id > 0){
-            setSub_categoryVal(category_id, '#subcategory_id', "{{ url('getSub_CategoriesByCategory')}}", "Sub-Categoria", "{{ old('subcategory_id') }}");       
+            setSub_categoryVal(category_id, '#subcategory_id', "{{ url('getSub_CategoriesByCategory')}}", "Ninguna", "{{ old('subcategory_id') }}");       
         }
     });
 
 
 $('#category_id').change(function(){                      
-    setSub_categories($(this).val(), '#subcategory_id', "{{ url('getSub_CategoriesByCategory')}}", "Sub-Categoria");
+    setSub_categories($(this).val(), '#subcategory_id', "{{ url('getSub_CategoriesByCategory')}}", "Ninguna");
 });
 
 

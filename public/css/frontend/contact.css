@@ -1,0 +1,49 @@
+.section-name {
+    padding: 20px 0;
+    background-color: #EEEEEE;
+}
+
+.section-name h2 {
+    margin: auto;
+    text-align: center;
+    max-width: 400px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #F27701;
+    color: #000000;
+    font-weight: bold;
+}
+
+.section-form .row-category {
+    width: 100%;
+    padding: 20px 0;
+    padding-bottom: 0;
+}
+
+.section-form .category-name {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #F27701;
+    display: block;
+    width: 100%;
+}
+
+.section-form .category-name span {
+    float: right;
+}
+
+.section-form .row-category .subcategory-name .subcategory-arrow {
+    float: right;
+}
+
+.section-form {
+    margin-bottom: 200px;
+}
+
+.cont-btn {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #EEEEEE;
+}

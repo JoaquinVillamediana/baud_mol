@@ -3,15 +3,14 @@
 @include('frontend/layouts.header')
 
 @section('content')
-<link rel="stylesheet" href="/css/frontend/catalog.css">
+<link rel="stylesheet" href="/css/frontend/contact.css">
 <section class="section-name">
   <div class="container text-center">
     <h2>Contacto</h2>
-    <p>Disponibles ante cualquier consulta.</p>
   </div>
 </section>
 
-<section class="section-catalog">
+<section class="section-form mt-4">
   <div class="container">
 
   <div class="row">
@@ -74,8 +73,8 @@
         </div>
         <!--Grid row-->
 
-        <div class="text-center text-md-left">
-    <button class="btn btn-primary" type="submit">Button</button>
+        <div class="text-center text-md-left cont-btn mt-4">
+    <button class="btn btn-baud m-auto" type="submit">Enviar</button>
     </div>
     </form>
 
@@ -109,34 +108,6 @@
 @include('frontend/layouts.footer')
 
 
-<script>
 
-$(document).on('click', '.category-name', function () {
-    event.preventDefault();
-    let category_id = $(this).data('category_id');
-    if($('#category-'+category_id).is(":visible"))
-    {
-      $('#category-'+category_id).slideToggle();
-    }
-    else{
-      $('#category-'+category_id).slideDown();
-    }
-
-});
-
-
-$(document).on('click', '.subcategory-name', function () {
-    event.preventDefault();
-    let subcategory_id = $(this).data('subcategory_id');
-    if($('#subcategory-'+subcategory_id).is(":visible"))
-    {
-      $('#subcategory-'+subcategory_id).slideToggle();
-    }
-    else{
-      $('#subcategory-'+subcategory_id).slideDown();
-    }
-
-});
-</script>
 
 @endsection

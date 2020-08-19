@@ -49,3 +49,8 @@ Route::delete('contactDelete/{id}', 'admin\ContactController@destroy')->name('co
 
 Route::resource('products', 'admin\ProductsController');
 Route::resource('sub', 'admin\SubController');
+
+
+//ajax
+
+Route::get('getSub_CategoriesByCategory', 'admin\SubController@getSub_CategoriesByCategory')->name('getSub_CategoriesByCategory');

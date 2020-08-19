@@ -26,15 +26,15 @@
             <div class="col-6">
                 <div class="row">
                     <div class="col-12">
-                        <a href="">Contacto</a>
+                        <a href="{{route('contacto')}}">Contacto</a>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-12">
                         <a><i class="fas fa-map-marker-alt"></i> Crespo 2049, C1406 CNA, Buenos Aires</a>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-12">
                         <a ><i class="fas fa-phone"></i> 011 4921-4227</a>
                     </div>
