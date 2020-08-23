@@ -27,7 +27,7 @@
                     <div id="subcategory-{{$subcategory->id}}" style="display: none" class="subcategory">
                       @foreach ($aProducts as $pr)
                         @if ($pr->subcategory_id == $subcategory->id)
-                          <h5 class="product">{{$pr->name}}<a href="#" class="more">Ver más</a></h5>
+                          <h5 class="product">{{$pr->name}}<a href="#" data-toggle="modal" data-target="#ProductModal-{{$pr->id}}" class="more">Ver más</a></h5>
                         @endif
                       @endforeach
                     </div>
@@ -38,7 +38,7 @@
             @endforeach
             @foreach($aProducts as $pr)
               @if($pr->category_id == $category->id && $pr->subcategory_id == NULL )
-                <h5 class="product">{{$pr->name}}<a href="#" class="more">Ver más</a></h5>
+                <h5 class="product">{{$pr->name}}<a href="#" data-toggle="modal" data-target="#ProductModal-{{$pr->id}}" class="more">Ver más</a></h5>
               @endif
             @endforeach
           </div>
@@ -47,6 +47,8 @@
     </div>
   </div>
 </section>
+
+@include('frontend/layouts.modals')
 
 @include('frontend/layouts.footer')
 
