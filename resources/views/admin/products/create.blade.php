@@ -60,12 +60,23 @@
                                     @endif
                                 </div>
                             </div>
-
+ 
+                            <input type="file" class="form-control {{ $errors->has('catalogo') ? ' is-invalid' : '' }}" name="catalogo" id="catalogo">
+                    @if ($errors->has('image'))
+                            <span id="image_error_lrv" class="invalid-feedback" role="alert" style="display:block;">
+                                <strong>Debe cargar una imagen ( .exe, .pdf ).</strong>
+                            </span>
+                            @endif
+                            <span id="image_error" class="invalid-feedback" role="alert" style="display:none;">
+                                <strong>Debe cargar una imagen ( .exe, .pdf ).</strong>
+                            </span>
+                         
+                            <div id="preview_image" class="mt-2" style=" display:none;"></div> 
+</br>
                         
 
-                        
-
-
+</br>
+             
 
                                                
   

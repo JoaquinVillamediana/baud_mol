@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="csrf-token" content="{{ Session::token() }}">
-        <title>DIAGEO</title>
+        <title>BAUD-MOL</title>
         <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
         <!-- Bootstrap core CSS-->
 

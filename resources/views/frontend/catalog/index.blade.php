@@ -31,6 +31,10 @@
                         @endif
                       @endforeach
                     </div>
+                 @else
+                 <div id="subcategory-null" style="display: none" class="subcategory">
+                 <h5 class="product">No hay productos disponibles aqui<a href="#" class="more">Ver más</a></h5>
+                 </div>
                   @endif
                   
                   
@@ -78,6 +82,16 @@ $(document).on('click', '.subcategory-name', function () {
     }
 
 });
+
+$(document).on('click', '.subcategory-null', function () {
+    event.preventDefault();
+    let subcategory_id = $(this).data('subcategory_id');
+   
+      $('#subcategory-null').slideDown();
+  
+
+});
+
 </script>
 
 @endsection

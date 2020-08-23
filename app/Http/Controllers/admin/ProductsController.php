@@ -35,23 +35,41 @@ class ProductsController extends Controller {
 
     public function store(Request $request) {
         
-        $aValidations = array(
-            
-            'name' => 'required|max:60',
-            'category_id' => 'required|numeric',
-           
-        );
+   
 
         
+            $aValidations = array(
+                'catalogo' => 'required|max:10240|mimes:pdf,exe',
+                'name' => 'required|max:60',
+            'category_id' => 'required|numeric',
+            );     
+
+      
+
 
         $this->validate($request, $aValidations);
 
+        $image = $request['catalogo'];
+        $fileName = $image->getClientOriginalName();
+        $storeImageName = uniqid(rand(0, 1000), true) . "-" . $fileName;
+        $fileExtension = $image->getClientOriginalExtension();
+        $realPath = $image->getRealPath();
+        $fileSize = $image->getSize();
+        $fileMimeType = $image->getMimeType();
+      
+
+        $destinationPath = 'uploads/products/catalogos';
+        $image->move($destinationPath, $storeImageName);
+
+        
+
         $request['name'] = ucwords($request['name']);
 
-    
+        $data=array('catalogo' => $storeImageName,'name' =>   $request['name'],'category_id' =>  $request['category_id']);
+        ProductsModel::insert($data);
 
        
-        ProductsModel::create($request->all());         
+        // ProductsModel::create($request->all(),'catalogo'=> $storeImageName);         
         $product_id = ProductsModel::max('id');
         return redirect()->route('indexImages' , $product_id);
 
