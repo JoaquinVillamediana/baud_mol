@@ -63,3 +63,11 @@
 .section-catalog {
     margin-bottom: 400px;
 }
+
+.download-link {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #F27701;
+    border-radius: 5px;
+}

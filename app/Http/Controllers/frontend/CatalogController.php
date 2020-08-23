@@ -6,6 +6,7 @@ use DB;
 use App\Models\SubModel;
 use Illuminate\Http\Request;
 use App\Models\ProductsModel;
+use App\Models\ImageModel;
 class CatalogController extends Controller
 {
     /**
@@ -36,8 +37,10 @@ class CatalogController extends Controller
         and pr.deleted_at is null
         GROUP BY sub_categoriess.id
         ');
+
+        $aImages = ImageModel::get();
         
-        return view('frontend/catalog.index',compact('aCategories','aSubCategories','aProducts'));
+        return view('frontend/catalog.index',compact('aCategories','aSubCategories','aProducts','aImages'));
     }
 
     /**
