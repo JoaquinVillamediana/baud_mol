@@ -65,7 +65,7 @@ class ProductsController extends Controller {
 
         $request['name'] = ucwords($request['name']);
 
-        $data=array('catalogo' => $storeImageName,'name' =>   $request['name'],'category_id' =>  $request['category_id']);
+        $data=array('catalogo' => $storeImageName,'name' =>   $request['name'],'category_id' =>  $request['category_id'],'subcategory_id' => $request['subcategory_id']);
         ProductsModel::insert($data);
 
        
