@@ -27,6 +27,9 @@ Route::get('send_mail', 'frontend\ContactController@mail')->name('send_mail');
 Route::get('contacto', 'frontend\ContactController@index')->name('contacto');
 Route::get('/catalogo', 'frontend\CatalogController@index')->name('catalog');
 // admin
+
+Route::middleware(['auth'])->group(function () {
+
 Route::get('upload-image','ProductsController@image');
 Route::post('upload-image',['as'=>'image.upload','uses'=>'admin\ProductsController@uploadImages']);
 
@@ -54,3 +57,5 @@ Route::resource('sub', 'admin\SubController');
 //ajax
 
 Route::get('getSub_CategoriesByCategory', 'admin\SubController@getSub_CategoriesByCategory')->name('getSub_CategoriesByCategory');
+
+});
