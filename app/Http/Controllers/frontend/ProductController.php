@@ -31,9 +31,11 @@ class ProductController extends Controller {
        
         ');
 
+        $aImages = ImageModel::get();
+
     
     
-        return view('frontend/product.index',compact('oProduct'));
+        return view('frontend/product.index',compact('oProduct','aImages'));
     }
 
     public function show() {
