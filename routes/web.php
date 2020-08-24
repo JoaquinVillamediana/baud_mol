@@ -18,6 +18,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('/admin', function () {
+    return redirect('/admin/user');
+});
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 // Frontend
@@ -27,7 +33,7 @@ Route::get('send_mail', 'frontend\ContactController@mail')->name('send_mail');
 Route::get('contacto', 'frontend\ContactController@index')->name('contacto');
 Route::get('/catalogo', 'frontend\CatalogController@index')->name('catalog');
 // admin
-
+Route::prefix('admin')->group(function () {
 Route::middleware(['auth'])->group(function () {
 
 Route::get('upload-image','ProductsController@image');
@@ -60,4 +66,5 @@ Route::resource('sub', 'admin\SubController');
 
 Route::get('getSub_CategoriesByCategory', 'admin\SubController@getSub_CategoriesByCategory')->name('getSub_CategoriesByCategory');
 
+});
 });
