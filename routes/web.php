@@ -50,7 +50,7 @@ Route::resource('slider', 'admin\SliderController');
 Route::delete('catalogoedit/{id}', 'admin\ProductsController@catalogo')->name('catalogoedit');
 Route::resource('contact', 'admin\ContactController');
 Route::delete('contactDelete/{id}', 'admin\ContactController@destroy')->name('contactDelete');
-Route::delete('destroyCatalog/{id}', 'admin\ProductsController@destroyCatalog')->name('destroyCatalog');
+Route::get('destroyCatalog/{id}', 'admin\ProductsController@destroyCatalog')->name('destroyCatalog');
 
 Route::resource('products', 'admin\ProductsController');
 Route::resource('sub', 'admin\SubController');

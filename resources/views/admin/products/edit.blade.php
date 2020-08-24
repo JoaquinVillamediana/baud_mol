@@ -70,15 +70,16 @@
                             </br>
                         
                             @if(!empty($oProduct->catalogo))
-                            <form  action="{{route('destroyCatalog', $oProduct->id)}}" method="POST">
-                                        {{csrf_field()}}
-                                        {{-- <input name="_method" type="hidden" value="DELETE"> --}}
-                                        <button type="submit" id="submiBtn" class="btn btn-warning btn-circle my-custom-confirmation" ><i class="fa fa-times"></i></button>
-                            </form>   
-                            <div class="download-link">
-                                <a href=""><i class="fas fa-file-excel"></i> Descargar catálogo de especificaciones <i class="float-right fas fa-download"></i></a>
-                            </div>
-
+                            {{-- <form class="destroyCatalog" action="{{route('destroyCatalog', $oProduct->id)}}" method="POST"> --}}
+                                        {{-- {{csrf_field()}} --}}
+                                        
+                                        <div class="download-link">
+                                            <a target="_blank" href="/uploads/products/catalogos/{{$oProduct->catalogo}}"><i class="fas fa-file-excel"></i> Actual catálogo de especificaciones</a>
+                                        </div>
+                                        <button type="button" onclick="window.location='{{ route('destroyCatalog', $oProduct->id) }}'">Button</button>            
+                                        {{-- <button type="submit" id="submiBtn" class="btn btn-warning btn-circle my-custom-confirmation float-right" ><i class="fa fa-times"></i></button> --}}
+                            {{-- </form>    --}}
+                            
                             @else
                             <label>Agregar catálogo</label>
                             <input type="file" class="form-control {{ $errors->has('catalogo') ? ' is-invalid' : '' }}" name="catalogo" id="catalogo">

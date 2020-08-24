@@ -1,33 +1,22 @@
-.deleteImage{
-  height: 20px;
-  width: 20px;
-  background-color: #bbbbbb;
-  position: absolute !important;
-  top:10px;
-  left:180px;
-  z-index:1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 5px;
-  border-radius: 3px;
+.deleteImage {
+    height: 20px;
+    width: 20px;
+    background-color: #bbbbbb;
+    position: absolute !important;
+    top: 10px;
+    left: 180px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    border-radius: 3px;
 }
 
-.pinImage{
-  height: 20px;
-  width: 20px;
-  background-color: #bbbbbb;
-  position: absolute !important;
-  top:10px;
-  left:30px;
-  z-index:1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 3px;
+.download-link {
+    display: inline-block;
 }
 
-.pinImage a{
-  color:#343A40;text-decoration:none;font-size:15px;z-index:2;
+.destroyCatalog {
+    border: 1px solid #aaaaaa;
 }

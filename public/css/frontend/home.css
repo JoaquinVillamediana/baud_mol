@@ -137,3 +137,12 @@
             display: flex;
             justify-content: flex-end;
         }
+        
+        @media (orientation:portrait) {
+            #main .titulo {
+                margin-left: 25px;
+            }
+            #main .titulo p {
+                display: none;
+            }
+        }

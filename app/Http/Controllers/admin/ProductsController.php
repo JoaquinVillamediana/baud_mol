@@ -284,7 +284,7 @@ class ProductsController extends Controller {
 
     public function destroyCatalog($id) {
 
-        $oProduct = ProductsModel::find($id)->get();
+        $oProduct = ProductsModel::where('id',$id)->first();
         $oProduct->catalogo = NULL;
         $oProduct->save();
         return redirect()->route('products.index')->with('success', 'Registro eliminado satisfactoriamente');
