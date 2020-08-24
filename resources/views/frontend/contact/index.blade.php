@@ -17,8 +17,8 @@
 
 <!--Grid column-->
 <div class="col-md-9 mb-md-0 mb-5">
-    <form  action="{{ route('send_mail') }}" >
-
+    <form method="POST" role="form" enctype="multipart/form-data" action="{{ route('send_mail') }}" >
+        @csrf
         <!--Grid row-->
         <div class="row">
 
@@ -66,7 +66,6 @@
                 <div class="md-form mt-4">
                 <label for="message">Mensaje</label>
                     <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Ej: Me gustaría consultar sobre..."></textarea>
-                    
                 </div>
 
             </div>

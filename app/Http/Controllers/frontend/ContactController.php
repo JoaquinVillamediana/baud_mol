@@ -35,21 +35,43 @@ class ContactController extends Controller {
     
     public function mail(Request $request){
         
-        $name =  $request['name'];
+        // $name =  $request['name'];
         
-        $email =  $request['email'];
+        // $email =  $request['email'];
         
-        $subject =  $request['subject'];
+        // $subject =  $request['subject'];
         
-        $message =  $request['message'];
+        // $message =  $request['message'];
 
-        $content="From: $name \n Email: $email \n Message: $message";
-        $recipient = "brizuelaortizg@gmail.com";
-        $mailheader = "From: $email \r\n";
+        // $content="From: $name \n Email: $email \n Message: $message";
+        // $recipient = "brizuelaortizg@gmail.com";
+        // $mailheader = "From: $email \r\n";
 
-        mail($recipient, $subject, $content, $mailheader) or die("Error!");
+        // mail($recipient, $subject, $content, $mailheader) or die("Error!");
 
-        return view('frontend/home.index');
+        
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required'
+        ]);
+
+        $data = array(
+            'name' => $request['name'],
+            'subject' => $request['subject'],
+            'email' => $request['email'],
+            'info' => $request['message']
+        );
+        // var_dump($data['message']);
+        \Mail::send('admin.Mail.contact',$data, function($mail) use ($data)
+          {
+             $mail->from($data['email']);
+             $mail->to('joacovillamediana@gmail.com');
+          });
+
+     return back()->with('success', 'Thank you for contact us!');
+        // return view('frontend/home.index');
     }
 
    
