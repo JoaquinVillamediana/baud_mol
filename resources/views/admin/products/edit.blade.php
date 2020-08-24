@@ -70,10 +70,10 @@
                             </br>
                         
                             @if(!empty($oProduct->catalogo))
-                            <form id="deleteForm_{{$oProduct->id}}" action="{{action('admin\ProductsController@catalogo', $oProduct->id)}}" method="POST">
+                            <form  action="{{route('destroyCatalog', $oProduct->id)}}" method="POST">
                                         {{csrf_field()}}
-                                        <input name="_method" type="hidden" value="DELETE">
-                                        <button type="button" id="submiBtn" class="btn btn-warning btn-circle my-custom-confirmation" data-toggle="modal" onclick="openDelModal({{$oProduct->id}});"><i class="fa fa-times"></i></button>
+                                        {{-- <input name="_method" type="hidden" value="DELETE"> --}}
+                                        <button type="submit" id="submiBtn" class="btn btn-warning btn-circle my-custom-confirmation" ><i class="fa fa-times"></i></button>
                             </form>   
                             <div class="download-link">
                                 <a href=""><i class="fas fa-file-excel"></i> Descargar catálogo de especificaciones <i class="float-right fas fa-download"></i></a>
@@ -121,12 +121,7 @@
                                         <div class="deleteImage">
                                             <a href="#" data-toggle="modal" class="font-weight-bold" onclick="openDelModal({{$image->id}});" style="color:#343A40;text-decoration:none;font-size:25px;z-index:2;">×</a>
                                         </div>
-                                        @if ($image->type == 0)
-                                            
-                                        <div class="pinImage" id="">
-                                            <a href="#" id="pinIcon_{{$image->id}}" onclick="setMainImage({{$image->id}});" style="@if($image->main_image == 1)color:#25890f ;@endif"><i class="fas fa-thumbtack"></i></a>
-                                        </div>
-                                        @endif
+
                                         
                                         
                                         @if ($image->type==0)

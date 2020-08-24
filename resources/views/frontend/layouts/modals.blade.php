@@ -35,7 +35,7 @@
         </div>
         @if (!empty($product->catalogo))
         <div class="download-link">
-          <a href=""><i class="fas fa-file-excel"></i> Descargar catálogo de especificaciones <i class="float-right fas fa-download"></i></a>
+          <a href="/uploads/products/catalogos/{{$product->catalogo}}"><i class="fas fa-file-excel"></i> Descargar catálogo de especificaciones <i class="float-right fas fa-download"></i></a>
         </div>
         @endif
       </div>

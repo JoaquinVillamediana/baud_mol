@@ -281,6 +281,14 @@ class ProductsController extends Controller {
         echo json_encode($aReturn);
     }
 
+
+    public function destroyCatalog($id) {
+
+        $oProduct = ProductsModel::find($id)->get();
+        $oProduct->catalogo = NULL;
+        $oProduct->save();
+        return redirect()->route('products.index')->with('success', 'Registro eliminado satisfactoriamente');
+    }
  
 
 }
