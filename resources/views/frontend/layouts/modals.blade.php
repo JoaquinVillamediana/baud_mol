@@ -14,12 +14,15 @@
       <div class="modal-body">
         <div id="carouselProductControls-{{$product->id}}" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
+            <?php $i = 0;?>
             @foreach ($aImages as $image)
             @if ($image->product_id == $product->id)
-            <div class="carousel-item active">
+            <div class="carousel-item @if($i == 0) active @endif">
               <img class="d-block w-100" src="/uploads/products/{{$image->image}}" alt="{{$product->name}}">
             </div>
+            <?php $i++;?>
             @endif
+
             @endforeach
           </div>
           <a class="carousel-control-prev" href="#carouselProductControls-{{$product->id}}" role="button"
