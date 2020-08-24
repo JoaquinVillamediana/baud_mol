@@ -66,13 +66,37 @@
                                     @endif
                                 </div>
                             </div>
-
                             
+                            </br>
+                        
+                            @if(!empty($oProduct->catalogo))
+                            <form id="deleteForm_{{$oProduct->id}}" action="{{action('admin\ProductsController@catalogo', $oProduct->id)}}" method="POST">
+                                        {{csrf_field()}}
+                                        <input name="_method" type="hidden" value="DELETE">
+                                        <button type="button" id="submiBtn" class="btn btn-warning btn-circle my-custom-confirmation" data-toggle="modal" onclick="openDelModal({{$oProduct->id}});"><i class="fa fa-times"></i></button>
+                            </form>   
+                            <div class="download-link">
+                                <a href=""><i class="fas fa-file-excel"></i> Descargar catálogo de especificaciones <i class="float-right fas fa-download"></i></a>
+                            </div>
 
+                            @else
+                            <label>Agregar catálogo</label>
+                            <input type="file" class="form-control {{ $errors->has('catalogo') ? ' is-invalid' : '' }}" name="catalogo" id="catalogo">
+                    @if ($errors->has('image'))
+                            <span id="image_error_lrv" class="invalid-feedback" role="alert" style="display:block;">
+                                <strong>Debe cargar una imagen ( .exe, .pdf ).</strong>
+                            </span>
+                            @endif
+                            <span id="image_error" class="invalid-feedback" role="alert" style="display:none;">
+                                <strong>Debe cargar una imagen ( .exe, .pdf ).</strong>
+                            </span>
+                         
+                            <div id="preview_image" class="mt-2" style=" display:none;"></div> 
+                            @endif
                      
                             
                            
-                            
+                            </br> 
                            
   
 
@@ -82,6 +106,8 @@
                             <button type="reset" class="btn btn-default">Reset</button>
                         </div>
                         </form>
+
+
                         
                         <div class="row mt-5">
                             @if (!empty($aImages))

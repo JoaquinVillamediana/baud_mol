@@ -47,6 +47,7 @@ Route::post('setMainImage', 'admin\ProductsController@setMainImage')->name('setM
 
 Route::resource('slider', 'admin\SliderController');
 
+Route::delete('catalogoedit/{id}', 'admin\ProductsController@catalogo')->name('catalogoedit');
 Route::resource('contact', 'admin\ContactController');
 Route::delete('contactDelete/{id}', 'admin\ContactController@destroy')->name('contactDelete');
 

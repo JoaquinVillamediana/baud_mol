@@ -91,6 +91,11 @@ class ProductsController extends Controller {
 
     }
 
+    public function catalogo($id){
+        $oProduct = ProductsModel::find($id);
+        $oProduct->catalogo = NULL;
+        return redirect()->back();
+    }
 
     public function update(Request $request, $id) {
         
@@ -124,6 +129,13 @@ class ProductsController extends Controller {
             $oProduct->subcategory_id = null;
         }
       
+        if(!empty($request['catalogo']))
+        {
+        $oProduct->catalogo = $request['catalogo'];
+        }else{
+            $oProduct->catalogo = null;
+        }
+
         $oProduct->category_id = $request['category_id'];
         $oProduct->save();
 
