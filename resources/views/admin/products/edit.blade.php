@@ -70,15 +70,13 @@
                             </br>
                         
                             @if(!empty($oProduct->catalogo))
-                            {{-- <form class="destroyCatalog" action="{{route('destroyCatalog', $oProduct->id)}}" method="POST"> --}}
-                                        {{-- {{csrf_field()}} --}}
-                                        
+
+                                        <div class="spec">
                                         <div class="download-link">
                                             <a target="_blank" href="/uploads/products/catalogos/{{$oProduct->catalogo}}"><i class="fas fa-file-excel"></i> Actual catálogo de especificaciones</a>
                                         </div>
-                                        <button type="button" onclick="window.location='{{ route('destroyCatalog', $oProduct->id) }}'">Button</button>            
-                                        {{-- <button type="submit" id="submiBtn" class="btn btn-warning btn-circle my-custom-confirmation float-right" ><i class="fa fa-times"></i></button> --}}
-                            {{-- </form>    --}}
+                                        <button type="button" class="float-right btn btn-danger" onclick="window.location='{{ route('destroyCatalog', $oProduct->id) }}'"><i class="fas fa-trash-alt"></i></button>            
+                                    </div>
                             
                             @else
                             <label>Agregar catálogo</label>

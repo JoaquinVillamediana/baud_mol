@@ -17,6 +17,11 @@
     display: inline-block;
 }
 
-.destroyCatalog {
-    border: 1px solid #aaaaaa;
+.spec {
+    display: flex;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
