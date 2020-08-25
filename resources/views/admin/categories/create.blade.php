@@ -15,44 +15,26 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-lg-6 margin-bottom-20" style="margin: 0 auto;">
-                        <form method="POST" action="{{ route('categories.store') }}" role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('categories.store') }}" role="form"
+                            enctype="multipart/form-data">
                             {{ csrf_field() }}
-                           
+
 
                             <div class="form-group">
                                 <label>Nombre</label>
-                                <input id="name" name="name" maxlength="250" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Nombre:" value="{{ old('name') }}">
+                                <input id="name" name="name" maxlength="250"
+                                    class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                    placeholder="Nombre:" value="{{ old('name') }}">
                                 @if ($errors->has('name'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>Debe ingresar un nombre valido.</strong>
                                 </span>
                                 @endif
-                            </div>       
-                              
-                        
-                            <div style="width:100%;float:left;"><h4 class="text-secondary"> Agregar promoción</h4></div>
-<input type="button" value="Yes" onclick="ShowHideDiv(this)" />
-<input type="button" value="No" onclick="ShowHideDiv(this)" />
-<hr />
-<div id="dvPassport" style="display: none">
-<div class="form-group col-12 col-md-6">
-                                    <label>PROMOCION</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">%</span>
-                                        </div>
-                                    <input type="number" id="prom" name="prom" maxlength="250" class="form-control{{ $errors->has('prom') ? ' is-invalid' : '' }}" placeholder="Promoción:" value="{{ old('prom') }}">
-                                    @if ($errors->has('prom'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Debe ingresar un promoción valido.</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                                </div>       
-</div>    
+                            </div>
 
 
-                  
+
+
 
                             <button type="submit" class="btn btn-primary">Agregar categoria</button>
                             <button type="reset" class="btn btn-default">Reset</button>

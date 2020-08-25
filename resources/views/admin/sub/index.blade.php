@@ -26,7 +26,6 @@
                                 <th>Id</th>
                                 <th>Categoria</th>         
                                 <th>Nombre</th>                                
-                                <th>Publicado</th>
                                 <th>Editar</th>
                                 <th>Eliminar</th>
                             </tr>
@@ -41,8 +40,7 @@
                                 <td>{{ $oSub->id }}</td>
                                 <td>{{ $oSub->category_name }}</td>
                                 <td>{{ $oSub->name }}</td>
-                                <td><a class="article_index_btn {{ $oSub->visible == 1 ? ' article_index_btn_active' : '' }}" href="" onClick="setSubcategoryVisible('{{ $oSub->id }}');"><i id="visible_icon_{{$oSub->id}}" class="fas fa-eye"></i></a></td>
-                                
+                
                                 <td><a class="btn btn-primary btn-circle" href="{{action('admin\SubController@edit', $oSub->id)}}"><i class="fa fa-list"></i></a></td>
                               
                                 <td>

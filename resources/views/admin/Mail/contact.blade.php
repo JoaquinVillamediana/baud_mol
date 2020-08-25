@@ -10,10 +10,12 @@
   <title>Document</title>
 </head>
 <body>
-  <h2>Hola! Recibiste un mensaje de tu página 'Baud-Mol'</h2>
-  <b>Nombre:</b> {{$name}}
-  <b>Email:</b> {{$email}}
-  <b>Asunto:</b>  {{$subject}}
-  <b>Mensaje:</b> {{$info}}
+  <div style="padding: 15px;border:1px solid #F27701;border-radius:5px;">
+  <h3 style="font-size: 24px">Hola! Recibiste un mensaje de tu página 'Baud-Mol'</h3>
+  <p style="font-size: 20px"><b>Nombre:</b> {{$name}} <br>
+  <b>Email:</b> {{$email}}  <br>
+  <b>Asunto:</b>  {{$subject}}  <br>
+  <b>Mensaje:</b> {{$info}} <br></p>
+  </div>
 </body>
 </html>

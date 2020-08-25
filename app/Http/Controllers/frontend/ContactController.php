@@ -51,10 +51,10 @@ class ContactController extends Controller {
 
         
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email',
-            'subject' => 'required',
-            'message' => 'required'
+            'name' => 'required|max:150',
+            'email' => 'required|email|max:100',
+            'subject' => 'required|max:60',
+            'message' => 'required|max:500'
         ]);
 
         $data = array(
@@ -67,6 +67,7 @@ class ContactController extends Controller {
         \Mail::send('admin.Mail.contact',$data, function($mail) use ($data)
           {
              $mail->from($data['email']);
+             $mail->subject('Alerta de contacto');
              $mail->to('joacovillamediana@gmail.com');
           });
 

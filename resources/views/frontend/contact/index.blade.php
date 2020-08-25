@@ -26,8 +26,12 @@
             <div class="col-md-6">
                 <div class="md-form mb-0">
                 <label for="name" class="">Nombre y apellido</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Ej: Jorge Nitales">
-                  
+                    <input type="text" id="name" name="name" class="form-control {{$errors->has('name') ? 'is-invalid' : '' }}" placeholder="Ej: Jorge Nitales">
+                    @if ($errors->has('name'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>Debe ingresar un nombre valido.</strong>
+                                </span>
+                                @endif
                 </div>
             </div>
             <!--Grid column-->
@@ -36,8 +40,12 @@
             <div class="col-md-6">
                 <div class="md-form mb-0">
                 <label for="email" class="">Email</label>
-                    <input type="text" id="email" name="email" class="form-control" placeholder="Ej: usuario@gmail.com">
-                  
+                    <input type="text" id="email" name="email" class="form-control  {{$errors->has('email') ? 'is-invalid' : '' }}" placeholder="Ej: usuario@gmail.com">
+                    @if ($errors->has('email'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>Debe ingresar un email valido.</strong>
+                    </span>
+                    @endif
                 </div>
             </div>
             <!--Grid column-->
@@ -50,8 +58,12 @@
             <div class="col-md-12">
                 <div class="md-form mb-0 mt-4">
                 <label for="subject" class="">Asunto</label>
-                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Ej: Consulta">
-                   
+                    <input type="text" id="subject" name="subject" class="form-control {{$errors->has('subject') ? 'is-invalid' : '' }}" placeholder="Ej: Consulta">
+                    @if ($errors->has('subject'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>Debe ingresar un asunto valido.</strong>
+                    </span>
+                    @endif
                 </div>
             </div>
         </div>
@@ -65,7 +77,12 @@
 
                 <div class="md-form mt-4">
                 <label for="message">Mensaje</label>
-                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Ej: Me gustaría consultar sobre..."></textarea>
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control  {{$errors->has('message') ? 'is-invalid' : '' }} md-textarea" placeholder="Ej: Me gustaría consultar sobre..."></textarea>
+                    @if ($errors->has('message'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>Debe ingresar un mensaje valido.</strong>
+                                </span>
+                                @endif
                 </div>
 
             </div>
